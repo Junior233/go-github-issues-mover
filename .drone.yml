@@ -1,0 +1,24 @@
+workspace:
+  base: /go
+  path: src/github.com/UnAfraid/go-github-issues-mover
+
+clone:
+  git:
+    image: plugins/git
+    tags: true
+
+pipeline:
+  test:
+    image: golang:latest
+    commands:
+      - go get -t
+      - go test
+  release:
+    image: golang:latest
+    commands:
+      - go get -t
+      - go build
+      - curl -sL https://git.io/goreleaser | bash /dev/stdin
+    secrets: [ github_token ]
+    when:
+      event: tag

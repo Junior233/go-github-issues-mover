@@ -1,0 +1,22 @@
+project_name: go-github-issues-mover
+release:
+  github:
+    owner: UnAfraid
+    name: go-github-issues-mover
+  name_template: '{{.Tag}}'
+builds:
+  -
+    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}} -extldflags "-static"
+    env:
+      - CGO_ENABLED=0
+    goos:
+     - windows
+     - linux
+     - darwin
+    goarch:
+     - amd64
+     - 386
+     - arm
+    goarm:
+     - 6
+     - 7
