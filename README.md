@@ -10,7 +10,7 @@ An automatic issue migration tool from one github repository to another.
 - Auto issue creation
 - Auto issue comment creation
 
-## Example configuration
+## Example config.yml
 ```yaml
 source:
     token: asdzaf89asd7a8asd # From https://github.com/settings/tokens/new (With only "repo" scope)
@@ -23,7 +23,7 @@ destination:
     repo:
         owner: UnAfraid # Destination name/organization
         name: go-github-issues-mover-v2 # Destination repository name
-        private: true # Used only when destination repo doesn't exists, private repository will be created if true, public if false
+        private: true # Used only when destination repository doesn't exists, private one will be created if true, public if false
         contributors:
           unafraid: asdzaf89asd7a8asd # From https://github.com/settings/tokens/new (With only "repo" scope)
           anotherUser: zasdasdasdasdasda # From https://github.com/settings/tokens/new (With only "repo" scope)
