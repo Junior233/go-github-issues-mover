@@ -1,0 +1,15 @@
+source:
+    token: asdzaf89asd7a8asd
+    repo:
+        owner: UnAfraid
+        name: go-github-issues-mover
+
+destination:
+    token: asdzaf89asd7a8asd
+    repo:
+        owner: UnAfraid
+        name: go-github-issues-mover-v2
+        private: true
+        contributors:
+          unafraid: asdzaf89asd7a8asd
+          anotherUser: zasdasdasdasdasda
